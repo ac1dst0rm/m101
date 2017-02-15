@@ -1,0 +1,400 @@
+/*-------Aufbau von CSS3-------
+
+Selektor { 
+  Eigenschaft1: Wert; 
+  Eigenschaft2: Wert; 
+}
+Selektor Eins, Selektor Zwei { 
+  Eigenschaft: Wert;ö 
+}
+
+
+-------Verschiedene Selektoren-------
+
+*: Alle auswählen 
+element: Typenselektor
+.class: Klassenselektor
+#ID: ID-Selektor
+
+
+-------Attributselektoren-------
+
+[a]: Attributpräsenz
+[a=v], [a~=v], [a|=v]: Attributwert
+[a^=v], [a$=v], [a*=v]: Teilübereinstimmung
+
+
+-------Kombinatoren-------
+
+e > f: Kindselektor
+e f: Nachfahrenselektor: 
+e + f: Nachbarselektor:
+* + *: The lobotomized owl selector
+e ~ f: Geschwisterselektor: 
+
+
+-------Pseudoelemente-------
+
+::first-line
+::first-letter
+::before, ::after
+::backdrop
+::selection
+
+
+-------Pseudoklassen-------
+
+strukturelle Pseudoklassen
+:root
+:empty
+:first-child
+:last-child
+:nth-child()
+:nth-last-child()
+:only-child
+:first-of-type
+:last-of-type
+:nth-of-type()
+:nth-last-of-type()
+:only-of-type
+dynamische Pseudoklassen
+:any-link, :link, :visited
+:hover, :active, :focus,
+:target
+:disabled, :enabled, :checked
+:valid, :invalid
+:in-range, :out-of-range
+:lang()
+:not()
+:matches()
+
+-------ENDE-------
+
+/* Autor: Sven Gasser
+   Datum: 11.02.2017 v1, v1.1 13.02.2017, 14.02.2017 v2
+   Inhalt: Reset, allgemeine Styles, Navbar Global, Navigation index.html
+*/
+
+
+/*---------------------------------------
+	Reset, damit keine Proleme auftreten
+-----------------------------------------*/
+
+*{	/*Der * selektiert alle aus*/
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+
+html{
+	background:url('../imgages/background.jpg') #fefefe;
+	position:relative;
+}
+
+body{
+    padding: 200px 0 0;
+	font:14px/1.3 'Segoe UI',Arial, sans-serif;
+	min-height:500px;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+section, footer, nav{
+	display: block;
+}
+
+h1 {
+	
+}
+
+
+p{
+	
+}
+
+.title {
+	
+}
+
+
+/*-------------------------
+	Responsive Container
+--------------------------*/
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	min-width: 960px;
+}
+
+.container {
+	width: 720px;
+}
+
+.container {
+	width: 480px;
+}
+
+.container {
+	width: 240px;
+}
+
+.container {
+	width: 960px;
+}
+
+#body {
+	
+	
+}
+
+#header > * > .inner {
+	    width: 100%;
+		max-width: 68em;
+		margin: 0 auto;
+		padding: 0 2.5em;	
+}
+
+
+#wrapper > * > .inner {
+	
+}
+
+/*-------------------------
+	Navigationsbar normal
+--------------------------*/
+#navbar {
+		background-color: #282828;
+		text-align: center;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 10000;
+		cursor: default;
+	}
+
+		/* Bei den folgenden Fonts gibt man mehrere an, damit man ein Fallback hätte (die gew$hlten Schriftarten sind ähnlich zueinander)*/
+		#navbar ul {
+			margin-bottom: 0;
+			font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+		}
+		
+		#navbar li {
+			display: inline-block;
+			font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+		}
+
+		#navbar a {
+			position: relative;
+			font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+			display: block;
+			color: #fff;
+			text-decoration: none;
+			outline: 0;
+		}
+
+			#navbar a:hover {
+				color: #fff !important;
+				font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+			}
+
+			#navbar a.active:before {
+				content: '';
+				font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+				display: block;
+				position: absolute;
+				bottom: -0.6em;
+				left: 50%;
+				margin-left: -0.75em;
+				border-left: solid 0.75em transparent;
+				border-right: solid 0.75em transparent;
+				border-top: solid 0.6em #282828;
+			}
+
+
+#header {
+}
+
+
+/*---------------------------------
+	Das index.hmtl Navigationsmenu
+-----------------------------------*/
+
+
+#colorNav > ul{
+	width: 450px; /* Erhöhen, wenn man mehr Menüitems hinufügt */
+	margin:0 auto;
+}
+
+#colorNav > ul > li{ /* Dieser Selektor wählt nur den oberen li */
+	list-style: none;
+	box-shadow: 0 0 10px rgba(100, 100, 100, 0.2) inset,1px 1px 1px #CCC;
+	display: inline-block;
+	line-height: 1;
+	margin: 1px;
+	border-radius: 3px;
+	position:relative;
+}
+
+#colorNav > ul > li > a{
+	color:inherit;
+	text-decoration:none !important;
+	font-size:24px;
+	padding: 25px;
+}
+
+#colorNav li ul{
+	position:absolute;
+	list-style:none;
+	text-align:center;
+	width:180px;
+	left:50%;
+	margin-left:-90px;
+	top:70px;
+	font:bold 12px 'Open Sans Condensed', sans-serif;
+	
+	/* This is important for the show/hide CSS animation */
+	max-height:0px;
+	overflow:hidden;
+	
+	-webkit-transition:max-height 0.4s linear;
+	-moz-transition:max-height 0.4s linear;
+	transition:max-height 0.4s linear;
+}
+
+#colorNav li ul li{
+	background-color:#313131;
+}
+
+#colorNav li ul li a{
+	padding:12px;
+	color:#fff !important;
+	text-decoration:none !important;
+	display:block;
+}
+
+#colorNav li ul li:nth-child(odd){ /* zebra stripes */
+	background-color:#363636;
+}
+
+#colorNav li ul li:hover{
+	background-color:#444;
+}
+
+#colorNav li ul li:first-child{
+	border-radius:3px 3px 0 0;
+	margin-top:25px;
+	position:relative;
+}
+
+#colorNav li ul li:first-child:before{ /* the pointer tip */
+	content:'';
+	position:absolute;
+	width:1px;
+	height:1px;
+	border:5px solid transparent;
+	border-bottom-color:#313131;
+	left:50%;
+	top:-10px;
+	margin-left:-5px;
+}
+
+#colorNav li ul li:last-child{
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+/* Dies löst das CSS aus */
+/* Bei hover (überfliegen) wird das DropDown-Menu angezeigt*/
+
+#colorNav li:hover ul{
+	max-height:200px; /* Dieser Wert muss erhöht werde, wenn man mehr dem DropDown mehr Einträge zuteilt*/
+}
+
+
+/*----------------------------
+	Color Themes
+-----------------------------*/
+
+
+#colorNav li.green{
+	/* Dies ist die Farbe vom Menu-Item*/
+	background-color:#00c08b;
+	
+	/* Dies ist die Farbe der Icons auf dem Button */
+	color:#127a5d;
+}
+
+#colorNav li.red{		background-color:#ea5080;color:#aa2a52;}
+#colorNav li.blue{		background-color:#53bfe2;color:#2884a2;}
+#colorNav li.yellow{	background-color:#f8c54d;color:#ab8426;}
+#colorNav li.purple{	background-color:#df6dc2;color:#9f3c85;}
+
+
+/*----------------------------
+	Footer von allem
+-----------------------------*/
+
+footer{
+	background-color: #111111;
+	bottom: 0;
+	box-shadow: 0 -1px 2px #111111;
+	height: 45px;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 100000;
+}
+
+footer h2{
+	color: #EEEEEE;
+	font-size: 14px;
+	font-weight: normal;
+	left: 50%;
+	margin-left: -400px;
+	padding: 13px 0 0;
+	position: absolute;
+	width: 540px;
+}
+
+footer h2 i{
+	font-style:normal;
+	color:#888;
+}
+
+footer a.tzine,a.tzine:visited{
+	color: #999999;
+	font-size: 12px;
+	left: 50%;
+	margin: 16px 0 0 110px;
+	position: absolute;
+	text-decoration: none;
+	top: 0;
+}
+
+footer a i{
+	color:#ccc;
+	font-style: normal;
+}
+
+footer a i b{
+	color:#c92020;
+	font-weight: normal;
+}
+

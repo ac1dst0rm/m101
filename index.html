@@ -1,109 +1,162 @@
-<!DOCTYPE html>
-<!--Dies beschreibt den Start der Webseite-->
+<!DOCTYPE HTML>
+<!--Dies beschreibt den Start der Webseite in HTML5-->
 
-<!--Hier mit wird die Sprache gesetzt, Suchmachschinenoptimierung weiter unten-->
-<html lang="de">
-	
-<!--Der Header enthält die wichtigsten Informationen, zb. den charset -->
-<head>
-			
-	<!--Dies ist der Titel der Webseite (wird auf dem Tab angezeigt)-->
-	<title>Dies ist ein test</title>
+<!--Autor: Sven Gasser 
+	Datum: 11.02.2017 v.1
+-->
 
-		<!--Setzt den Schriftstandart fest-->
+<!--Notiz: Dieser Code wurde absichtlich auskommentiert, damit dieser auch im nachhinein von allen Verstanden wird.-->
+
+<html>
+
+	<!--Der Header enthält die wichtigsten Informationen, zb. den charset -->
+	<head>
+		
+		<!--Dies ist der Titel der Webseite (wird auf dem Tab angezeigt)-->
+		<title>Sven Gasser</title>
+		
+		<!--Meta Tags-->
+		<!--Setzt den Schriftstandart fest, UTF-8 besteht aus 2 Bytes, als über 65´000 Schriftzeichen-->
 		<meta charset="utf-8" />
-
+		
+		<!--IE öffnet den Content mit der neusten Version von Edge-->
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		
 		<!--Dies dient zur Browserdarstellung-->
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-		<!--Dieser Abschnitt dient zur Suchmaschinenoptimierung.-->
+		
+		<!--Dies ist das Icon in der Tabbar-->
+		<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+		
+		<!--Browser. welche diese Funktion unterstüzen, werdem die Tabs gefärbt-->
+		<meta name="theme-color" content="#ffffff">
+		
+		<!--CSS-->
+		<link rel="stylesheet" href="assets/main.css" />
+				
+		<!--Dieser Abschnitt dient zur Suchmaschinenoptimierung-->
 		<meta http-equiv="content-type">
 		<meta name="Content-language" content="de"/>
-		<meta name="author" 	      content="Sven Gasser"/>
+		<meta name="author" 	      content="Sven Gasser @SvenGasser1"/>
 		<meta name="publisher"        content="Sven Gasser"/>
 		<meta name="copyright"        content="yes"/>
-		<meta name="keywords"	      content="Webdesign, Content Creator"/>
-		<meta name="description"      content="This Site is a Test site about ÜK M101" />
-		<meta name="page-topic"       content="testing html"/>
+		<meta name="keywords"	      content="Webdesign, Content Creator, Photography"/>
+		<meta name="description"      content="Biography" />
+		<meta name="page-topic"       content="presenting myself"/>
 		<meta name="page-type"	      content="knowledge"/>
-		<meta name="language"         content="german"/>
-
-		<!--Hier wird das CSS verlinkt -->
-		<link rel="stylesheet" href="assets/css/main.css" />
-													
-</head>
+		<meta name="language"         content="german/Deutsch"/>
 		
-<!--Beginn vom Body, also dem Hauptteil der Webseite-->
-<body class="body">
+		<!--Suchmaschinenoptimierung, was sie anzeigen sollen-->
+		<meta name="robots" content="index"/>
+		
+		<!--Direkt über IP für schnellere Verbindung-->
+		<link rel="dns-prefetch" href="//fonts.googleapis.com"/>
+		
 			
-	<!-- Nav bar mit CSS3--> 
-	<ul class="navbar">
-		<li> <a class="specialcolor" href="index.html">Home</a></li>
-		<li><a href="whoami.html">Wer wir sind</a></li>
-		<li><a href="gallery.html">Galerie</a></li>
-		<li><a href="contact.html">Kontakt</a></li>
-	</ul>
+	</head>
 	
-<section> 
-			<!-- Header -->
-			<section>
-				<header>
-					<h1 class="h1">SG3R Webdesign</h1>
-					<p>Willkommen auf der Homepage von SG3R Webdesign. Wir programmieren und unterhalten Ihre Webseiten und machen auch Content.</p>
-				</header>
-				<footer>
-					<a href="" class="">Wer wir sind</a>
-				</footer>
-			</section>
-			
-</section>
+	<body>
+	<nav id="colorNav">
+			<ul>
+				<li class="green">
+					<a href="#" class="icon-home"></a>
+					<ul>
+						<li><a href="http://tutorialzine.com/2012/10/css3-dropdown-menu/">Back to the tutorial</a></li>
+						<li><a href="http://tutorialzine.com/2012/10/css3-dropdown-menu/#comments">Get help</a></li>
+						<li><a href="http://tutorialzine.com/2012/10/css3-dropdown-menu/">Download this example</a></li>
+					</ul>
+				</li>
+				<li class="red">
+					<a href="#" class="icon-cogs"></a>
+					<ul>
+						<li><a href="#">Payment</a></li>
+						<li><a href="#">Notifications</a></li>
+						<li><a href="#">Privacy options</a></li>
+						<li><a href="#">Account Settings</a></li>
+					</ul>
+				</li>
+				<li class="blue">
+					<a href="#" class="icon-twitter"></a>
+					<ul>
+						<li><a href="http://twitter.com/Tutorialzine">Follow us on Twitter</a></li>
+						<li><a href="http://www.facebook.com/Tutorialzine">Find us on Facebook</a></li>
+					</ul>
+				</li>
+				<li class="yellow">
+					<a href="#" class="icon-beaker"></a>
+					<ul>
+						<li><a href="http://tutorialzine.com/tag/php/">PHP tutorials</a></li>
+						<li><a href="http://tutorialzine.com/tag/jquery/">jQuery techniques</a></li>
+						<li><a href="http://tutorialzine.com/tag/css/">CSS articles</a></li>
+						<li><a href="http://tutorialzine.com/category/tutorials/">Everything else</a></li>
+					</ul>
+				</li>
+				<li class="purple">
+					<a href="#" class="icon-envelope"></a>
+					<ul>
+						<li><a href="http://tutorialzine.com/contact/">Contact us</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	<!-- Wrapper -->
+			<div id="wrapper">
 
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
 
-<!--"normaler" Text, Hauptabschnitt-->
-<main>
+							<!-- Logo & Text Links-->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.png" alt="" /></span><span class="title">Sven Gasser</span>
+								</a>
 
-	<article>
-		<h1 class="h1">Was wir machen</h1>
-		<p>Dies ist ein Artikel.</p>
-	</article>
-
-</main>
-
-		<p>insert cool speak here</p>
-
-			<!--Mit dem figure wird ein Bild definiert. Geht auch anders-->
-			<figure>
-				<img src="images/test.gif" alt="Testbild" width="500" height="256">
-				<figcaption>Dies ist ein Testbild.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></figcaption>
-			</figure>
-</body>
-
-<footer>
-	<div class="">
+							</div>
+							<nav id="navbar">
+								<ul class="container">
+								<li><a href="#top">Home</a></li>
+								<li><a href="#work">Work</a></li>
+								<li><a href="#portfolio">Portfolio</a></li>
+								<li><a href="#contact">Contact</a></li>
+								</ul>
+							</nav>
+							
+					</header>
+											
+					<!--Main-->
+					<div id="main">
+						<div class="inner">
+						
+							<header>
+								<!--Titel-->
+								<h1>Willkommen bei  SG3R Webdesign<br/></h1>
+								
+								<!--Untertitel-->
+								<p> SG3R Webdesign programmiert ansprechende Internetseiten mit Verwendung von neusten Webtechnologien. Dank unserem Rundumpaket müssen Sie sich nicht um das Webhosting kümmern.</p>
+							
+							</header>			
+						
+						<!--Bild 1-->		
+				 		<section class="top" id="top">>
+								<article class="style1">
+									<span class="image">
+										<img src="images/bild1.jpg" alt="" width="150" height="150">
+									</span>
+									
+									<!--Dieser Text wird auf dem Bild angezeigt-->
+									<a href="generic.html">
+										<h2>Hello World</h2>
+										
+										<!--Text, welcher nach Hover angezeigt wird-->
+										<div class="content">
+											<p>Das ist nun ein Text</p>
+										</div>
+									</a>
+								 </article>	
+					
+		</body>	
+</html>		
 		
-		<a href="https://www.instagram.com/idontdrinkwaterfishfuckinit/?hl?de" class="">Instagram</a>
-		
-	</div>
-			
-	<details>
 	
-		<address>
-		
-		Written by <a href="mailto:sven.gasser@digitalnatives.ch">Sven Gasser</a>.<br> 
-		BLJ ZbW<br>
-		
-		</address>
-		
-		<div>
-		
-			<!--Das summary ist aufklappbar.--> 
-			<summary>Copyright 2017.</summary>
-			<p>by Sven Gasser. All Rights Reserved.</p>
-			
-		</div>
-  		
-	</details>
-</footer>
 
-			
-</html>
+
