@@ -6,7 +6,6 @@
 -->
 
 <!--Notiz: Dieser Code wurde absichtlich auskommentiert, damit dieser auch im nachhinein von allen Verstanden wird.-->
-
 <html class="html">
 	
 	<!--Der Header enthält die wichtigsten Informationen, zb. den charset -->
@@ -34,6 +33,7 @@
 		<!--CSS-->
 		<link rel="stylesheet" href="assets/main.css" />
 		<link rel="stylesheet" href="assets/fonts/fonts.css" />
+		<link rel="stylesheet" href="assets/normalize.css" />
 		
 		<!--Dieser Abschnitt dient zur Suchmaschinenoptimierung-->
 		<meta http-equiv="content-type">
@@ -53,8 +53,23 @@
 		
 		<!--Direkt über IP für schnellere Verbindung-->
 		<link rel="dns-prefetch" href="//fonts.googleapis.com"/>
-				
+			
 	</head>
+	
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+    		document.getElementById("main").style.marginLeft = "250px";
+    		document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("main").style.marginLeft= "0";
+    		document.body.style.backgroundColor = "white";
+}
+		
+</script>
 	
 	<header>
 			<div>
@@ -62,10 +77,20 @@
 				<p class="style1">
 				<a href="index.html"><img src="images/logo.png" alt="" class="logo">Sven Gasser</a></p>
 			</div>
+			
 	</header>
 			
-	<body>		
-			
+	<body>
+		<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <a href="#">Test</a>
+		  <a href="#">Hey</a>
+		  <a href="#">Clients</a>
+		  <a href="#">Contact</a>
+		</div>	
+		<br>			
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Menu</span>
+		
 	<nav class="bodyNav" id="colorNav">
 			<ul>
 				<li class="green">
@@ -101,7 +126,6 @@
 						<li><a href="mailto:sven.gasser@digitalnatives.ch">E-Mail</a></li>
 						<li><a href="https://www.instagram.com/idontdrinkwaterfishfuckinit/?hl%3Fde=undefined" target="_blank">Instagram</a></li>
 						<li><a href="https://500px.com/valentinmller" target="_blank">500px</a></li>
-						
 					</ul>
 				</li>
 			</ul>
